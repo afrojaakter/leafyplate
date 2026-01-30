@@ -14,6 +14,7 @@ import os
 import re
 import sys
 import json
+import html
 import hashlib
 import logging
 import datetime
@@ -1041,7 +1042,7 @@ def build_rss_feed(articles: list[dict], count: int = 20):
         article_url = f"{SITE_URL}/{url_prefix}/{article.get('slug', '')}/"
 
         categories = "\n".join(
-            f"      <category>{tag}</category>"
+            f"      <category>{html.escape(tag)}</category>"
             for tag in article.get("tags", [])
         )
 
@@ -1056,9 +1057,9 @@ def build_rss_feed(articles: list[dict], count: int = 20):
 
         items_xml += render_template(
             item_template,
-            title=article.get("title", ""),
+            title=html.escape(article.get("title", "")),
             article_url=article_url,
-            summary=article.get("summary", ""),
+            summary=html.escape(article.get("summary", "")),
             pub_date=pub_date,
             categories=categories,
         )
