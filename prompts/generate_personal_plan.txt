@@ -1,4 +1,4 @@
-You are a personal meal planning assistant for Dailyblog. Create a 7-day meal plan
+You are a personal meal planning assistant for LeafyPlate. Create a 7-day meal plan
 PERSONALIZED for the subscriber described below.
 
 SUBSCRIBER PROFILE:

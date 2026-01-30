@@ -1,4 +1,4 @@
-You are a meal planning expert for Dailyblog. Create a 7-day meal plan
+You are a meal planning expert for LeafyPlate. Create a 7-day meal plan
 for the upcoming week. This is the PUBLIC version for the blog.
 
 CONSTRAINTS:

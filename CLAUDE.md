@@ -1,8 +1,8 @@
-# Dailyblog — Claude Code Guidelines
+# LeafyPlate — Claude Code Guidelines
 
 ## Project Overview
 
-Dailyblog is an AI-powered healthy eating platform with two components:
+LeafyPlate is an AI-powered healthy eating platform with two components:
 1. **Public blog** — Static HTML/CSS site with auto-generated recipes, articles, meal plans
 2. **Personalized email service** — Weekly meal plans + shopping lists tailored per subscriber
 

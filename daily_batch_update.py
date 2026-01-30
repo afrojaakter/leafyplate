@@ -1,5 +1,5 @@
 """
-daily_batch_update.py — Dailyblog content generation engine.
+daily_batch_update.py — LeafyPlate content generation engine.
 
 Fetches RSS feeds, identifies topics via Gemini AI, generates original content
 (recipes, articles, myth busters, meal plans), and builds the static site.
@@ -43,7 +43,7 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
 )
-log = logging.getLogger("dailyblog")
+log = logging.getLogger("leafyplate")
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -209,7 +209,7 @@ def fetch_all_feeds() -> list[dict]:
 def extract_source_content(url: str, max_chars: int = 3000) -> str:
     """Fetch a source URL and extract main text content."""
     try:
-        headers = {"User-Agent": "Dailyblog/1.0 (content research)"}
+        headers = {"User-Agent": "LeafyPlate/1.0 (content research)"}
         resp = requests.get(url, headers=headers, timeout=15)
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, "lxml")
@@ -377,7 +377,7 @@ def generate_recipe(client, topic: dict, source_content: str) -> dict | None:
     recipe["slug"] = slug
     recipe["date"] = today.isoformat()
     recipe["date_formatted"] = today.strftime("%B %d, %Y")
-    recipe["author"] = "Dailyblog Kitchen"
+    recipe["author"] = "LeafyPlate Kitchen"
     recipe["total_time_minutes"] = (
         recipe.get("prep_time_minutes", 0) + recipe.get("cook_time_minutes", 0)
     )
@@ -413,7 +413,7 @@ def generate_article(client, topic: dict, source_content: str) -> dict | None:
     article["slug"] = slug
     article["date"] = today.isoformat()
     article["date_formatted"] = today.strftime("%B %d, %Y")
-    article["author"] = "Dailyblog"
+    article["author"] = "LeafyPlate"
     article["source_articles"] = [{
         "title": topic.get("source_title", ""),
         "url": topic.get("source_url", ""),
@@ -449,7 +449,7 @@ def generate_myth_buster(client, topic: dict, source_content: str) -> dict | Non
     article["slug"] = slug
     article["date"] = today.isoformat()
     article["date_formatted"] = today.strftime("%B %d, %Y")
-    article["author"] = "Dailyblog"
+    article["author"] = "LeafyPlate"
     article["generated_at"] = datetime.datetime.now(datetime.timezone.utc).isoformat()
 
     # Ensure myth_buster tags
@@ -515,7 +515,7 @@ def render_template(template: str, **kwargs) -> str:
 
 
 def get_base_path() -> str:
-    """Get the base path for URLs (empty for root, or /Dailyblog for GH Pages)."""
+    """Get the base path for URLs (empty for root, or /LeafyPlate for GH Pages)."""
     from urllib.parse import urlparse
     parsed = urlparse(SITE_URL)
     return parsed.path.rstrip("/")
@@ -894,7 +894,7 @@ def build_index_pages(articles: list[dict]):
 
         page_html = render_full_page(
             content,
-            page_title="Dailyblog" if page_num == 1 else f"Page {page_num}",
+            page_title="LeafyPlate" if page_num == 1 else f"Page {page_num}",
             page_description=SITE_TAGLINE,
         )
 
@@ -930,7 +930,7 @@ def build_tag_pages(articles: list[dict]):
     tag_index_html = render_full_page(
         tag_index_content,
         page_title="All Tags",
-        page_description="Browse Dailyblog content by topic",
+        page_description="Browse LeafyPlate content by topic",
     )
     write_output("tags/index.html", tag_index_html)
 
@@ -948,7 +948,7 @@ def build_tag_pages(articles: list[dict]):
         html = render_full_page(
             content,
             page_title=f"Tagged: {tag_name}",
-            page_description=f"Dailyblog posts tagged '{tag_name}'",
+            page_description=f"LeafyPlate posts tagged '{tag_name}'",
         )
         write_output(f"tags/{tag_name}/index.html", html)
 
@@ -984,7 +984,7 @@ def build_archive_pages(articles: list[dict]):
         render_full_page(
             archive_index_html,
             page_title="Archive",
-            page_description="Dailyblog monthly archive",
+            page_description="LeafyPlate monthly archive",
         ),
     )
 
@@ -1003,7 +1003,7 @@ def build_archive_pages(articles: list[dict]):
         html = render_full_page(
             content,
             page_title=month_name,
-            page_description=f"Dailyblog posts from {month_name}",
+            page_description=f"LeafyPlate posts from {month_name}",
         )
         write_output(f"archive/{year}/{month}/index.html", html)
 
@@ -1142,7 +1142,7 @@ def should_generate_myth_buster() -> bool:
 def daily_batch():
     """Run the full daily content generation pipeline."""
     log.info("=" * 60)
-    log.info("Dailyblog — Daily Batch Generation")
+    log.info("LeafyPlate — Daily Batch Generation")
     log.info("=" * 60)
 
     client = init_gemini()
@@ -1224,7 +1224,7 @@ def daily_batch():
 # ═══════════════════════════════════════════════════════════════
 
 def main():
-    parser = argparse.ArgumentParser(description="Dailyblog content generation engine")
+    parser = argparse.ArgumentParser(description="LeafyPlate content generation engine")
     parser.add_argument("--rebuild", action="store_true", help="Rebuild site from existing data only")
     parser.add_argument("--test", action="store_true", help="Generate one test recipe and build")
     args = parser.parse_args()

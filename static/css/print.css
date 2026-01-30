@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   Dailyblog — Print Stylesheet
+   LeafyPlate — Print Stylesheet
    Optimized for printing recipes and meal plans
    ═══════════════════════════════════════════════════════════════ */
 
@@ -83,7 +83,7 @@
     /* Add header to print */
     .recipe-post::before,
     .meal-plan-post::before {
-        content: 'Dailyblog — dailyblog.example.com';
+        content: 'LeafyPlate — leafyplate.com';
         display: block;
         font-size: 9pt;
         color: #999;

@@ -1,4 +1,4 @@
-You are a science communicator for Dailyblog. Write a "Myth vs. Reality" article
+You are a science communicator for LeafyPlate. Write a "Myth vs. Reality" article
 about a common food or nutrition misconception.
 
 TONE: Not condescending. The reader isn't dumb for believing the myth —

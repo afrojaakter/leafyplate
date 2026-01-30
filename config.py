@@ -1,4 +1,4 @@
-"""Dailyblog — Site-wide configuration constants."""
+"""LeafyPlate — Site-wide configuration constants."""
 
 import os
 from pathlib import Path
@@ -7,14 +7,14 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ─── Site Identity ──────────────────────────────────────────────
-SITE_URL = os.environ.get("SITE_URL", "https://yourusername.github.io/Dailyblog")
-SITE_TITLE = "Dailyblog"
+SITE_URL = os.environ.get("SITE_URL", "https://yourusername.github.io/LeafyPlate")
+SITE_TITLE = "LeafyPlate"
 SITE_TAGLINE = "Fresh ideas. Real food. Zero nonsense."
 SITE_DESCRIPTION = (
     "An AI-powered healthy eating platform featuring recipes, nutrition articles, "
     "weekly meal plans, and shoppable shopping lists."
 )
-SITE_AUTHOR = "Dailyblog"
+SITE_AUTHOR = "LeafyPlate"
 SITE_LANGUAGE = "en"
 SITE_LOGO_EMOJI = "\U0001f96c"  # 🥬
 
@@ -72,9 +72,9 @@ USDA_API_KEY = os.environ.get("USDA_API_KEY", "")
 # ─── Email (Brevo) ─────────────────────────────────────────────
 BREVO_API_KEY = os.environ.get("BREVO_API_KEY", "")
 BREVO_LIST_ID = int(os.environ.get("BREVO_LIST_ID") or "1")
-BREVO_SENDER_NAME = "Dailyblog"
-BREVO_SENDER_EMAIL = os.environ.get("BREVO_SENDER_EMAIL", "digest@dailyblog.example.com")
+BREVO_SENDER_NAME = "LeafyPlate"
+BREVO_SENDER_EMAIL = os.environ.get("BREVO_SENDER_EMAIL", "digest@leafyplate.com")
 
 # ─── Affiliate Programs ───────────────────────────────────────
-AMAZON_AFFILIATE_TAG = os.environ.get("AMAZON_AFFILIATE_TAG", "dailyblog-20")
+AMAZON_AFFILIATE_TAG = os.environ.get("AMAZON_AFFILIATE_TAG", "leafyplate-20")
 WALMART_AFFILIATE_ID = os.environ.get("WALMART_AFFILIATE_ID", "")

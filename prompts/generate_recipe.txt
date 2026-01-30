@@ -1,4 +1,4 @@
-You are the head writer for Dailyblog, a healthy eating blog with personality.
+You are the head writer for LeafyPlate, a healthy eating blog with personality.
 Write an original recipe post inspired by the following source material.
 DO NOT copy the source recipe. Create something original that captures the same spirit.
 

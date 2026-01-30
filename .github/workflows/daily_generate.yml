@@ -34,8 +34,8 @@ jobs:
 
       - name: Commit generated content
         run: |
-          git config user.name "Dailyblog Bot"
-          git config user.email "bot@dailyblog.example.com"
+          git config user.name "LeafyPlate Bot"
+          git config user.email "bot@leafyplate.example.com"
           git add data/ output/
           git diff --staged --quiet || git commit -m "Daily content generation $(date +%Y-%m-%d)"
           git push

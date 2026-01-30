@@ -33,8 +33,8 @@ jobs:
 
       - name: Commit generated plans
         run: |
-          git config user.name "Dailyblog Bot"
-          git config user.email "bot@dailyblog.example.com"
+          git config user.name "LeafyPlate Bot"
+          git config user.email "bot@leafyplate.example.com"
           git add data/personal_plans/
           git diff --staged --quiet || git commit -m "Weekly meal plans $(date +%Y-%m-%d)"
           git push

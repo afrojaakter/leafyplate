@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Dailyblog Subscriber Profile",
+  "title": "LeafyPlate Subscriber Profile",
   "type": "object",
   "required": ["name", "email", "household_size", "active"],
   "properties": {

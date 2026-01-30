@@ -166,7 +166,7 @@ def main():
         return
 
     html = render_digest_email(articles)
-    subject = f"Dailyblog Weekly Digest — {datetime.date.today().strftime('%B %d')}"
+    subject = f"LeafyPlate Weekly Digest — {datetime.date.today().strftime('%B %d')}"
 
     send_campaign(subject, html, dry_run=args.dry_run)
 
