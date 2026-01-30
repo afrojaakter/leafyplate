@@ -1,0 +1,81 @@
+<article class="recipe-post">
+    <header class="recipe-header">
+        <div class="recipe-meta-bar">
+            <span class="post-type-badge recipe-badge">Recipe</span>
+            <time datetime="{date}">{date_formatted}</time>
+        </div>
+        <h1>{title}</h1>
+        <p class="card-subtitle">{subtitle}</p>
+        <div class="recipe-quick-info">
+            <div class="info-chip">
+                <span>&#9202;</span>
+                <span>{total_time_minutes} min</span>
+            </div>
+            <div class="info-chip">
+                <span>&#127860;</span>
+                <span>{servings} servings</span>
+            </div>
+            <div class="info-chip">
+                <span>&#9733;</span>
+                <span>{difficulty}</span>
+            </div>
+        </div>
+        <div class="diet-labels">
+            {diet_label_badges}
+        </div>
+    </header>
+
+    {recipe_image}
+
+    <div class="recipe-intro">
+        {intro_html}
+    </div>
+
+    <div class="recipe-body">
+        <section class="ingredients-section">
+            <h2>Ingredients</h2>
+            {ingredients_html}
+        </section>
+
+        <section class="instructions-section">
+            <h2>Instructions</h2>
+            <ol class="instructions-list">
+                {instructions_html}
+            </ol>
+        </section>
+
+        <section class="tips-section">
+            <h2>Tips &amp; Notes</h2>
+            <ul>
+                {tips_html}
+            </ul>
+        </section>
+
+        <aside class="nutrition-card">
+            <h3>Nutrition (per serving, estimated)</h3>
+            <table class="nutrition-table">
+                <tr><td>Calories</td><td class="nutrition-value">{calories}</td></tr>
+                <tr><td>Protein</td><td class="nutrition-value">{protein_g}g</td></tr>
+                <tr><td>Carbs</td><td class="nutrition-value">{carbs_g}g</td></tr>
+                <tr><td>Fat</td><td class="nutrition-value">{fat_g}g</td></tr>
+                <tr><td>Fiber</td><td class="nutrition-value">{fiber_g}g</td></tr>
+                <tr><td>Sodium</td><td class="nutrition-value">{sodium_mg}mg</td></tr>
+            </table>
+        </aside>
+    </div>
+
+    <section class="shop-ingredients">
+        <h2>Shop the Ingredients</h2>
+        {shopping_links_html}
+    </section>
+
+    <div class="share-buttons">
+        <a href="https://twitter.com/intent/tweet?text={encoded_title}&amp;url={encoded_url}" class="share-btn share-twitter" target="_blank" rel="noopener">Share on X</a>
+        <a href="https://www.pinterest.com/pin/create/button/?url={encoded_url}&amp;description={encoded_title}" class="share-btn share-pinterest" target="_blank" rel="noopener">Pin It</a>
+        <a href="mailto:?subject={encoded_title}&amp;body={encoded_url}" class="share-btn share-email">Email</a>
+    </div>
+
+    <div class="tag-list">
+        {tag_links}
+    </div>
+</article>

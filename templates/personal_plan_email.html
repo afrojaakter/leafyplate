@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Meal Plan — {subscriber_name}</title>
+</head>
+<body style="margin:0;padding:0;background-color:#FAFAF7;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:600px;margin:0 auto;background:#FFFFFF;">
+        <!-- Header -->
+        <tr>
+            <td style="background:linear-gradient(135deg,#E07A3A,#5B8C5A);padding:28px 24px;text-align:center;">
+                <span style="font-size:28px;">&#x1F96C;</span>
+                <h1 style="color:#FFFFFF;font-size:22px;margin:8px 0 4px;font-family:Georgia,serif;">Your Meal Plan</h1>
+                <p style="color:rgba(255,255,255,0.9);font-size:14px;margin:0;">Week of {week_date} &bull; {subscriber_name}</p>
+            </td>
+        </tr>
+
+        <!-- Personalization Note -->
+        <tr>
+            <td style="padding:24px 24px 8px;">
+                <p style="color:#7A7468;font-size:13px;font-style:italic;margin:0;line-height:1.5;">
+                    {personalization_notes}
+                </p>
+            </td>
+        </tr>
+
+        <!-- Tonight's Dinner (quick reference) -->
+        <tr>
+            <td style="padding:16px 24px;">
+                <div style="background:#FFF3E0;border-left:4px solid #E07A3A;border-radius:0 8px 8px 0;padding:16px;">
+                    <p style="color:#B05E24;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;margin:0 0 4px;">Tonight's Dinner</p>
+                    <p style="color:#2D2A24;font-size:16px;font-weight:600;margin:0;">{tonight_dinner_name}</p>
+                    <p style="color:#7A7468;font-size:13px;margin:4px 0 0;">{tonight_dinner_time} min &bull; {tonight_dinner_calories} cal</p>
+                </div>
+            </td>
+        </tr>
+
+        <!-- 7-Day Plan -->
+        <tr>
+            <td style="padding:16px 24px;">
+                <h2 style="color:#2D2A24;font-size:18px;font-family:Georgia,serif;margin:0 0 16px;border-bottom:2px solid #E07A3A;padding-bottom:8px;">
+                    7-Day Plan
+                </h2>
+                {days_html}
+            </td>
+        </tr>
+
+        <!-- Shopping List -->
+        <tr>
+            <td style="padding:16px 24px;">
+                <h2 style="color:#2D2A24;font-size:18px;font-family:Georgia,serif;margin:0 0 16px;border-bottom:2px solid #5B8C5A;padding-bottom:8px;">
+                    Shopping List
+                </h2>
+                {shopping_list_html}
+            </td>
+        </tr>
+
+        <!-- Prep Tips -->
+        <tr>
+            <td style="padding:16px 24px;">
+                <div style="background:#F0EDE6;border-radius:8px;padding:16px;">
+                    <h3 style="color:#E07A3A;font-size:14px;margin:0 0 8px;">Prep Ahead</h3>
+                    <ul style="color:#2D2A24;font-size:14px;line-height:1.6;margin:0;padding-left:20px;">
+                        {prep_tips_html}
+                    </ul>
+                </div>
+            </td>
+        </tr>
+
+        <!-- Stats -->
+        <tr>
+            <td style="padding:16px 24px;">
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td style="text-align:center;padding:12px;background:#E8F0E7;border-radius:8px;">
+                            <p style="color:#5B8C5A;font-size:12px;font-weight:600;text-transform:uppercase;margin:0;">Avg. Daily</p>
+                            <p style="color:#2D2A24;font-size:20px;font-weight:700;margin:4px 0 0;">{total_daily_calories_avg} cal</p>
+                        </td>
+                        <td style="width:12px;"></td>
+                        <td style="text-align:center;padding:12px;background:#FFF3E0;border-radius:8px;">
+                            <p style="color:#B05E24;font-size:12px;font-weight:600;text-transform:uppercase;margin:0;">Est. Cost</p>
+                            <p style="color:#2D2A24;font-size:20px;font-weight:700;margin:4px 0 0;">{estimated_weekly_cost}</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+            <td style="background:#F0EDE6;padding:24px;text-align:center;border-top:1px solid #E5E0D5;">
+                <p style="color:#7A7468;font-size:12px;margin:0 0 4px;">
+                    &copy; {year} Dailyblog &bull; Generated with AI assistance
+                </p>
+                <p style="color:#7A7468;font-size:12px;margin:0 0 4px;">
+                    Nutrition info is estimated. Not a substitute for professional advice.
+                </p>
+                <p style="color:#7A7468;font-size:12px;margin:0;">
+                    <a href="{unsubscribe_url}" style="color:#7A7468;">Unsubscribe</a> &bull;
+                    <a href="{preferences_url}" style="color:#7A7468;">Update Preferences</a>
+                </p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

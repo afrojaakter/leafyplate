@@ -1,0 +1,265 @@
+{
+  "title": "Afroj's Winter Weekly Meal Plan",
+  "overview": "This personalized 7-day winter meal plan for Afroj, designed for a household of two, focuses on high-protein meals from Mediterranean, Asian, Mexican, and Indian cuisines. The plan incorporates intermediate-level recipes, utilizes Sunday for meal prep to simplify busy weeknights, and ensures all cooking times are under 45 minutes, with quick options for Tuesday and Thursday.",
+  "days": {
+    "monday": {
+      "breakfast": {
+        "name": "High-Protein Scrambled Eggs with Spinach and Whole Wheat Toast",
+        "calories": 380,
+        "time_minutes": 15,
+        "is_leftover": false
+      },
+      "lunch": {
+        "name": "Leftover Sheet Pan Chicken Fajita Bowl (from Sunday prep)",
+        "calories": 480,
+        "time_minutes": 5,
+        "is_leftover": true
+      },
+      "dinner": {
+        "name": "Indian-Inspired Red Lentil Dal with Brown Rice and Roasted Broccoli",
+        "calories": 680,
+        "time_minutes": 40,
+        "is_leftover": false
+      },
+      "snack": {
+        "name": "Cottage Cheese with Sliced Cucumber",
+        "calories": 160
+      }
+    },
+    "tuesday": {
+      "breakfast": {
+        "name": "Green Smoothie with Spinach, Banana, and Protein Powder",
+        "calories": 370,
+        "time_minutes": 10,
+        "is_leftover": false
+      },
+      "lunch": {
+        "name": "Leftover Red Lentil Dal (from Monday dinner)",
+        "calories": 450,
+        "time_minutes": 5,
+        "is_leftover": true
+      },
+      "dinner": {
+        "name": "Quick Shrimp and Veggie Stir-fry with Instant Brown Rice",
+        "calories": 620,
+        "time_minutes": 20,
+        "is_leftover": false
+      },
+      "snack": {
+        "name": "Handful of Almonds",
+        "calories": 200
+      }
+    },
+    "wednesday": {
+      "breakfast": {
+        "name": "Oatmeal with Mixed Berries, Nuts, and Protein Powder",
+        "calories": 400,
+        "time_minutes": 10,
+        "is_leftover": false
+      },
+      "lunch": {
+        "name": "Mediterranean Quinoa Salad with Feta, Cucumber, Tomatoes, and Olives",
+        "calories": 490,
+        "time_minutes": 15,
+        "is_leftover": false
+      },
+      "dinner": {
+        "name": "Baked Salmon with Roasted Asparagus and Sweet Potato",
+        "calories": 680,
+        "time_minutes": 40,
+        "is_leftover": false
+      },
+      "snack": {
+        "name": "Hard-Boiled Eggs (1 per person)",
+        "calories": 140
+      }
+    },
+    "thursday": {
+      "breakfast": {
+        "name": "Breakfast Burrito with Scrambled Eggs, Bell Peppers, and Whole Wheat Tortilla",
+        "calories": 410,
+        "time_minutes": 15,
+        "is_leftover": false
+      },
+      "lunch": {
+        "name": "Leftover Baked Salmon with Asparagus and Sweet Potato (from Wednesday dinner)",
+        "calories": 480,
+        "time_minutes": 5,
+        "is_leftover": true
+      },
+      "dinner": {
+        "name": "Black Bean & Corn Quesadillas with Salsa and Greek Yogurt",
+        "calories": 600,
+        "time_minutes": 20,
+        "is_leftover": false
+      },
+      "snack": {
+        "name": "Orange",
+        "calories": 80
+      }
+    },
+    "friday": {
+      "breakfast": {
+        "name": "Greek Yogurt with Mixed Berries and Chia Seeds",
+        "calories": 360,
+        "time_minutes": 5,
+        "is_leftover": false
+      },
+      "lunch": {
+        "name": "Leftover Black Bean & Corn Quesadillas (from Thursday dinner)",
+        "calories": 420,
+        "time_minutes": 5,
+        "is_leftover": true
+      },
+      "dinner": {
+        "name": "Chicken Tikka Masala with Brown Rice and Naan Bread",
+        "calories": 720,
+        "time_minutes": 45,
+        "is_leftover": false
+      },
+      "snack": {
+        "name": "Steamed Edamame",
+        "calories": 180
+      }
+    },
+    "saturday": {
+      "breakfast": {
+        "name": "Whole Wheat Pancakes with Fresh Fruit and Greek Yogurt",
+        "calories": 420,
+        "time_minutes": 20,
+        "is_leftover": false
+      },
+      "lunch": {
+        "name": "Leftover Chicken Tikka Masala (from Friday dinner)",
+        "calories": 500,
+        "time_minutes": 5,
+        "is_leftover": true
+      },
+      "dinner": {
+        "name": "Asian Ground Turkey Lettuce Wraps with Peanut Dipping Sauce",
+        "calories": 650,
+        "time_minutes": 35,
+        "is_leftover": false
+      },
+      "snack": {
+        "name": "Rice Cakes with Avocado",
+        "calories": 200
+      }
+    },
+    "sunday": {
+      "breakfast": {
+        "name": "Greek Yogurt with Granola and Mixed Berries",
+        "calories": 390,
+        "time_minutes": 5,
+        "is_leftover": false
+      },
+      "lunch": {
+        "name": "Mediterranean Chickpea Salad with Whole Wheat Pita",
+        "calories": 470,
+        "time_minutes": 15,
+        "is_leftover": false
+      },
+      "dinner": {
+        "name": "Sheet Pan Chicken Fajitas with Cilantro Lime Rice (Batch Cook for 2-3 future meals)",
+        "calories": 700,
+        "time_minutes": 40,
+        "is_leftover": false
+      },
+      "snack": {
+        "name": "Apple Slices with Peanut Butter",
+        "calories": 200
+      }
+    }
+  },
+  "shopping_list": {
+    "produce": [
+      "Mixed Berries (e.g., blueberries, strawberries): 2 (16oz) containers",
+      "Bananas: 4",
+      "Fresh Spinach: 1 (5oz) bag",
+      "Cucumber: 1 large",
+      "Apple: 2",
+      "Bell Peppers (red, green, yellow): 1 of each color",
+      "Yellow Onion: 2 large",
+      "Red Onion: 1 small",
+      "Garlic: 1 head",
+      "Ginger: 1 (2-inch) piece",
+      "Lemon: 2",
+      "Lime: 2",
+      "Broccoli: 1 large head",
+      "Asparagus: 1 bunch",
+      "Sweet Potato: 2 medium",
+      "Cilantro: 1 bunch",
+      "Avocado: 2",
+      "Lettuce (butter or iceberg for wraps): 1 head",
+      "Jalapeño: 1 (optional)"
+    ],
+    "protein": [
+      "Greek Yogurt (plain, high protein): 1 large (32oz) tub",
+      "Eggs: 1 dozen",
+      "Boneless, Skinless Chicken Breast: 2 lbs",
+      "Raw Shrimp (peeled, deveined): 1 lb",
+      "Salmon Fillets: 2 (6oz) fillets",
+      "Lean Ground Turkey: 1 lb",
+      "Cottage Cheese: 1 (16oz) container",
+      "Protein Powder (whey or plant-based): 1 container (if not already stocked)"
+    ],
+    "dairy": [
+      "Feta Cheese (crumbled): 1 (4oz) package",
+      "Shredded Mexican Cheese Blend: 1 (8oz) bag",
+      "Almond Milk (unsweetened): 1 (half gallon) carton",
+      "Butter: 1 stick"
+    ],
+    "pantry": [
+      "Granola: 1 (12oz) bag",
+      "Whole Wheat Pita Bread: 1 package (6-8 pitas)",
+      "Brown Rice (long grain or instant): 1 (2lb) bag",
+      "Quinoa: 1 (1lb) bag",
+      "Red Lentils: 1 (1lb) bag",
+      "Canned Chickpeas: 1 (15oz) can",
+      "Whole Wheat Bread: 1 loaf",
+      "Peanut Butter: 1 jar",
+      "Whole Almonds: 1 (8oz) bag",
+      "Rolled Oats: 1 (18oz) container",
+      "Whole Wheat Tortillas (large): 1 package (8-10 count)",
+      "Canned Black Beans: 1 (15oz) can",
+      "Salsa: 1 jar",
+      "Naan Bread: 1 package (2-4 pieces)",
+      "Rice Cakes: 1 package",
+      "Frozen Edamame: 1 (10oz) bag",
+      "Light Coconut Milk (canned): 1 (13.5oz) can",
+      "Tomato Paste: 1 small tube/can",
+      "Canned Diced Tomatoes: 1 (14.5oz) can",
+      "Low Sodium Soy Sauce: 1 bottle",
+      "Sesame Oil: 1 bottle",
+      "Cornstarch: 1 small box",
+      "Honey or Maple Syrup: 1 bottle (if not already stocked)",
+      "Olive Oil (assumed stocked, but for specific recipe needs)",
+      "Vegetable or Chicken Broth: 1 carton",
+      "Curry Paste (red or green): 1 small jar"
+    ],
+    "spices": [
+      "Cumin (ground)",
+      "Coriander (ground)",
+      "Turmeric (ground)",
+      "Garam Masala",
+      "Chili Powder",
+      "Smoked Paprika",
+      "Garlic Powder",
+      "Onion Powder",
+      "Red Pepper Flakes (optional)"
+    ]
+  },
+  "estimated_weekly_cost": "$120-160",
+  "total_daily_calories_avg": 1800,
+  "prep_tips": [
+    "Sunday: Batch cook extra chicken fajita components (chicken, peppers, onions) and cilantro lime rice. Store separately for Monday lunch and potential quick dinner later in the week.",
+    "Throughout the week: When chopping vegetables for dinner, chop extra for the next day's meal or snack to save time.",
+    "Hard boil a batch of 2-4 eggs on Sunday or Monday for quick high-protein snacks during the week.",
+    "Pre-portion nuts and berries for snacks or breakfast toppings."
+  ],
+  "personalization_notes": "This plan caters specifically to Afroj's preferences by featuring a diverse range of Mediterranean, Asian, Mexican, and Indian cuisines. It prioritizes high-protein meals and incorporates meal-prep friendly recipes, especially on Sunday, to ensure busy weeknights (Tuesday and Thursday) have quick or leftover options. All recipes are at an intermediate skill level, respect the 45-minute cooking time limit, and are scaled for two people within a moderate budget, targeting approximately 1800 calories per day per person.",
+  "subscriber": "Afroj",
+  "week_number": 5,
+  "year": 2026,
+  "generated_at": "2026-01-29T20:49:09.778405+00:00"
+}

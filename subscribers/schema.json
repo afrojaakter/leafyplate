@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dailyblog Subscriber Profile",
+  "type": "object",
+  "required": ["name", "email", "household_size", "active"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Subscriber's first name"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "household_size": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Number of people eating (scales servings and shopping quantities)"
+    },
+    "dietary_restrictions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Allergies, religious, or ethical restrictions (e.g. no-pork, vegetarian, nut-free, halal, dairy-free)"
+    },
+    "preferences": {
+      "type": "object",
+      "properties": {
+        "cuisine_likes": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Preferred cuisines (e.g. mediterranean, asian, mexican, american, indian)"
+        },
+        "disliked_ingredients": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Specific ingredients to avoid (e.g. eggplant, olives, cilantro)"
+        },
+        "cooking_skill": {
+          "type": "string",
+          "enum": ["beginner", "intermediate", "advanced"],
+          "description": "Determines recipe complexity"
+        },
+        "max_cooking_time_minutes": {
+          "type": "integer",
+          "minimum": 10,
+          "description": "Maximum time willing to spend cooking a single meal"
+        },
+        "meal_prep_friendly": {
+          "type": "boolean",
+          "description": "Whether to include batch-cooking and make-ahead meals"
+        }
+      }
+    },
+    "nutrition_targets": {
+      "type": "object",
+      "properties": {
+        "daily_calories": {
+          "type": "integer",
+          "minimum": 1200,
+          "description": "Target daily calorie intake"
+        },
+        "high_protein": {
+          "type": "boolean",
+          "description": "Prioritize high-protein meals (30%+ calories from protein)"
+        }
+      }
+    },
+    "schedule": {
+      "type": "object",
+      "properties": {
+        "busy_nights": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+          },
+          "description": "Nights that need quick meals (<20 min) or leftovers"
+        },
+        "meal_prep_day": {
+          "type": "string",
+          "enum": ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"],
+          "description": "Day for batch cooking and prep"
+        }
+      }
+    },
+    "budget": {
+      "type": "string",
+      "enum": ["tight", "moderate", "flexible"],
+      "description": "Weekly grocery budget level"
+    },
+    "preferred_grocery_store": {
+      "type": "string",
+      "description": "Primary store for shopping links (e.g. walmart, amazon_fresh, instacart)"
+    },
+    "delivery_time": {
+      "type": "string",
+      "enum": ["sunday_evening", "sunday_morning", "saturday_evening", "monday_morning"],
+      "description": "When to receive the weekly meal plan email"
+    },
+    "tonight_dinner_reminder": {
+      "type": "boolean",
+      "description": "Whether to receive daily 4 PM dinner reminder emails"
+    },
+    "active": {
+      "type": "boolean",
+      "description": "Whether this subscriber is currently active"
+    }
+  }
+}

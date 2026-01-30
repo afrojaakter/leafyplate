@@ -1,0 +1,26 @@
+{
+  "name": "Afroj",
+  "email": "afroj@example.com",
+  "household_size": 2,
+  "dietary_restrictions": [],
+  "preferences": {
+    "cuisine_likes": ["mediterranean", "asian", "mexican", "indian"],
+    "disliked_ingredients": [],
+    "cooking_skill": "intermediate",
+    "max_cooking_time_minutes": 45,
+    "meal_prep_friendly": true
+  },
+  "nutrition_targets": {
+    "daily_calories": 1800,
+    "high_protein": true
+  },
+  "schedule": {
+    "busy_nights": ["tuesday", "thursday"],
+    "meal_prep_day": "sunday"
+  },
+  "budget": "moderate",
+  "preferred_grocery_store": "walmart",
+  "delivery_time": "sunday_evening",
+  "tonight_dinner_reminder": true,
+  "active": true
+}

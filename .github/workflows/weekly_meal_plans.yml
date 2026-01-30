@@ -1,0 +1,40 @@
+name: Weekly Meal Plans + Email
+
+on:
+  schedule:
+    - cron: '0 18 * * 0'  # 6:00 PM UTC every Sunday
+  workflow_dispatch:
+
+jobs:
+  generate-and-send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate personalized meal plans
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python meal_planner.py
+
+      - name: Send meal plan emails
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+        run: python send_meal_plans.py
+
+      - name: Commit generated plans
+        run: |
+          git config user.name "Dailyblog Bot"
+          git config user.email "bot@dailyblog.example.com"
+          git add data/personal_plans/
+          git diff --staged --quiet || git commit -m "Weekly meal plans $(date +%Y-%m-%d)"
+          git push

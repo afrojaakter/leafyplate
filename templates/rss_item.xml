@@ -1,0 +1,8 @@
+    <item>
+      <title>{title}</title>
+      <link>{article_url}</link>
+      <description>{summary}</description>
+      <pubDate>{pub_date}</pubDate>
+      <guid isPermaLink="true">{article_url}</guid>
+      {categories}
+    </item>

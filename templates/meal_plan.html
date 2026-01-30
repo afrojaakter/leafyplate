@@ -1,0 +1,39 @@
+<article class="meal-plan-post">
+    <header class="meal-plan-header">
+        <span class="post-type-badge mealplan-badge">Meal Plan</span>
+        <h1>{title}</h1>
+        <p class="overview">{overview}</p>
+        <div class="meal-plan-stats">
+            <span>~{total_daily_calories_avg} cal/day</span>
+            <span class="cost-badge">Est. cost: {estimated_weekly_cost}</span>
+        </div>
+    </header>
+
+    <div class="meal-plan-grid">
+        {day_cards_html}
+    </div>
+
+    <section class="shopping-list">
+        <h2>Shopping List</h2>
+        <div class="shopping-columns">
+            {shopping_list_html}
+        </div>
+    </section>
+
+    <section class="prep-tips">
+        <h2>Prep Ahead Tips</h2>
+        <ul>
+            {prep_tips_html}
+        </ul>
+    </section>
+
+    <div class="share-buttons">
+        <a href="https://twitter.com/intent/tweet?text={encoded_title}&amp;url={encoded_url}" class="share-btn share-twitter" target="_blank" rel="noopener">Share on X</a>
+        <a href="https://www.pinterest.com/pin/create/button/?url={encoded_url}&amp;description={encoded_title}" class="share-btn share-pinterest" target="_blank" rel="noopener">Pin It</a>
+        <a href="mailto:?subject={encoded_title}&amp;body={encoded_url}" class="share-btn share-email">Email</a>
+    </div>
+
+    <div class="tag-list">
+        {tag_links}
+    </div>
+</article>

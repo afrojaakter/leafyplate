@@ -1,0 +1,227 @@
+{
+  "title": "Cozy Winter Root & Lentil Power Bowl with Lemony Tahini",
+  "subtitle": "A warm, hearty bowl to nourish your soul (and tummy!)",
+  "tags": [
+    "winter",
+    "dinner",
+    "vegetarian",
+    "vegan",
+    "gluten-free",
+    "healthy",
+    "bowls",
+    "lentils",
+    "roasted vegetables"
+  ],
+  "diet_labels": [
+    "vegetarian",
+    "vegan",
+    "gluten-free"
+  ],
+  "difficulty": "easy",
+  "prep_time_minutes": 20,
+  "cook_time_minutes": 40,
+  "servings": 4,
+  "intro_html": "<p>Brrr, it's officially cozy season! When the temperatures drop, all I crave are comforting meals that warm me from the inside out without leaving me feeling, well, sluggish. That's where this Warm Winter Power Bowl swoops in like a delicious superhero. It’s packed with earthy, sweet roasted root vegetables, hearty lentils, and a bright, zesty lemon-tahini dressing that ties everything together beautifully. It’s truly a hug in a bowl!</p><p>This dish isn't just about warmth; it's about nourishing your body with goodness. You'll find a fantastic blend of fiber and plant-based protein from the lentils, plus a rainbow of essential vitamins and antioxidants from the root veggies. It’s designed to keep you feeling energized and satisfied through the colder, darker days, and the vibrant colors alone are enough to brighten any winter afternoon!</p><p>The best part? It's incredibly forgiving and easy to whip up. Just chop, roast, simmer, and drizzle – you’ve got this! You can even prep some components ahead of time for a speedy weeknight dinner. Get ready to fall in love with your new go-to winter meal!</p>",
+  "ingredients": [
+    {
+      "item": "Sweet Potato",
+      "amount": "1 large",
+      "unit": "",
+      "prep": "peeled, diced into 1-inch cubes",
+      "group": "main"
+    },
+    {
+      "item": "Carrots",
+      "amount": "2 large",
+      "unit": "",
+      "prep": "peeled, diced into 1-inch pieces",
+      "group": "main"
+    },
+    {
+      "item": "Parsnips",
+      "amount": "2 medium",
+      "unit": "",
+      "prep": "peeled, diced into 1-inch pieces",
+      "group": "main"
+    },
+    {
+      "item": "Red Onion",
+      "amount": "1/2",
+      "unit": "",
+      "prep": "roughly chopped",
+      "group": "main"
+    },
+    {
+      "item": "Olive Oil",
+      "amount": "3",
+      "unit": "tbsp",
+      "prep": "divided",
+      "group": "main"
+    },
+    {
+      "item": "Dried Rosemary",
+      "amount": "1",
+      "unit": "tsp",
+      "prep": "",
+      "group": "main"
+    },
+    {
+      "item": "Dried Thyme",
+      "amount": "1/2",
+      "unit": "tsp",
+      "prep": "",
+      "group": "main"
+    },
+    {
+      "item": "Smoked Paprika",
+      "amount": "1/2",
+      "unit": "tsp",
+      "prep": "",
+      "group": "main"
+    },
+    {
+      "item": "Salt",
+      "amount": "1/2",
+      "unit": "tsp",
+      "prep": "",
+      "group": "main"
+    },
+    {
+      "item": "Black Pepper",
+      "amount": "1/4",
+      "unit": "tsp",
+      "prep": "",
+      "group": "main"
+    },
+    {
+      "item": "Brown or Green Lentils",
+      "amount": "1",
+      "unit": "cup",
+      "prep": "rinsed",
+      "group": "main"
+    },
+    {
+      "item": "Vegetable Broth or Water",
+      "amount": "3",
+      "unit": "cups",
+      "prep": "",
+      "group": "main"
+    },
+    {
+      "item": "Bay Leaf",
+      "amount": "1",
+      "unit": "",
+      "prep": "",
+      "group": "main"
+    },
+    {
+      "item": "Tahini",
+      "amount": "1/4",
+      "unit": "cup",
+      "prep": "",
+      "group": "dressing"
+    },
+    {
+      "item": "Lemon Juice",
+      "amount": "2",
+      "unit": "tbsp",
+      "prep": "freshly squeezed",
+      "group": "dressing"
+    },
+    {
+      "item": "Water",
+      "amount": "3-5",
+      "unit": "tbsp",
+      "prep": "or more, to thin",
+      "group": "dressing"
+    },
+    {
+      "item": "Garlic",
+      "amount": "1",
+      "unit": "clove",
+      "prep": "minced",
+      "group": "dressing"
+    },
+    {
+      "item": "Maple Syrup",
+      "amount": "1",
+      "unit": "tsp",
+      "prep": "optional, for sweetness",
+      "group": "dressing"
+    },
+    {
+      "item": "Salt",
+      "amount": "1/4",
+      "unit": "tsp",
+      "prep": "",
+      "group": "dressing"
+    },
+    {
+      "item": "Fresh Parsley",
+      "amount": "2",
+      "unit": "tbsp",
+      "prep": "chopped, for garnish",
+      "group": "topping"
+    },
+    {
+      "item": "Toasted Pumpkin Seeds",
+      "amount": "2",
+      "unit": "tbsp",
+      "prep": "for garnish (optional)",
+      "group": "topping"
+    }
+  ],
+  "instructions": [
+    {
+      "step": 1,
+      "text": "Preheat your oven to 400°F (200°C). Line a large baking sheet with parchment paper for easy cleanup."
+    },
+    {
+      "step": 2,
+      "text": "In a large bowl, combine the diced sweet potato, carrots, parsnips, and red onion. Drizzle with 2 tablespoons of olive oil, rosemary, thyme, smoked paprika, 1/2 tsp salt, and black pepper. Toss well to ensure all the veggies are coated. Spread them in a single layer on the prepared baking sheet."
+    },
+    {
+      "step": 3,
+      "text": "Roast for 30-40 minutes, flipping halfway through, or until the vegetables are tender and slightly caramelized at the edges. Keep an eye on them – you want them golden and sweet, not burnt!"
+    },
+    {
+      "step": 4,
+      "text": "While the vegetables are roasting, prepare the lentils. In a medium saucepan, combine the rinsed lentils, vegetable broth (or water), the remaining 1 tablespoon of olive oil, and the bay leaf. Bring to a boil, then reduce heat to low, cover, and simmer for 20-25 minutes, or until lentils are tender but still hold their shape. Drain any excess liquid and remove the bay leaf."
+    },
+    {
+      "step": 5,
+      "text": "While everything is cooking, whisk together the dressing ingredients: tahini, lemon juice, water (start with 3 tbsp and add more until it reaches a pourable consistency), minced garlic, maple syrup (if using), and 1/4 tsp salt. Taste and adjust seasonings as needed. You want it tangy, creamy, and bright!"
+    },
+    {
+      "step": 6,
+      "text": "To assemble your power bowls, divide the cooked lentils among four bowls. Top with the roasted root vegetables. Drizzle generously with the lemon-tahini dressing. Garnish with fresh parsley and toasted pumpkin seeds, if desired."
+    },
+    {
+      "step": 7,
+      "text": "Serve warm and enjoy your delicious, nourishing winter meal!"
+    }
+  ],
+  "nutrition_per_serving": {
+    "calories": 470,
+    "protein_g": 25,
+    "carbs_g": 65,
+    "fat_g": 22,
+    "fiber_g": 18,
+    "sodium_mg": 480
+  },
+  "tips": [
+    "**Don't crowd the pan!** When roasting vegetables, give them space on the baking sheet. If they're too close, they'll steam instead of roast, preventing those delicious crispy, caramelized edges you're looking for. Use two baking sheets if necessary.",
+    "**Lentil Storage:** Cooked lentils can be stored in an airtight container in the fridge for up to 4-5 days, making this a great meal prep component.",
+    "**Customize Your Veggies:** Feel free to swap in other sturdy winter veggies like butternut squash, parsnips, or even Brussels sprouts!"
+  ],
+  "summary": "This cozy Winter Root & Lentil Power Bowl is packed with sweet roasted vegetables, hearty lentils, and a zesty lemon-tahini dressing. It’s an easy, nourishing, and flavorful meal perfect for colder days, offering a fantastic blend of fiber and plant-based protein.",
+  "id": "20260129-cozy-winter-root--lentil-power-bowl-with",
+  "type": "recipe",
+  "slug": "cozy-winter-root--lentil-power-bowl-with",
+  "date": "2026-01-29",
+  "date_formatted": "January 29, 2026",
+  "author": "Dailyblog Kitchen",
+  "total_time_minutes": 60,
+  "generated_at": "2026-01-29T20:43:58.670908+00:00",
+  "image": "static/images/recipes/cozy-winter-root--lentil-power-bowl-with.png"
+}

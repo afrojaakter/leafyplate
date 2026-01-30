@@ -1,0 +1,183 @@
+{
+  "id": "20260128-crispy-chickpea-bowls",
+  "type": "recipe",
+  "title": "Crispy Spiced Chickpea Grain Bowls",
+  "slug": "crispy-spiced-chickpea-grain-bowls",
+  "subtitle": "Crunchy, protein-packed, and done in 25 minutes",
+  "date": "2026-01-28",
+  "date_formatted": "January 28, 2026",
+  "author": "Dailyblog Kitchen",
+  "tags": [
+    "vegetarian",
+    "meal-prep",
+    "high-protein",
+    "under-30-min",
+    "budget-friendly"
+  ],
+  "category": "recipe",
+  "difficulty": "easy",
+  "prep_time_minutes": 10,
+  "cook_time_minutes": 15,
+  "total_time_minutes": 25,
+  "servings": 4,
+  "diet_labels": [
+    "vegetarian",
+    "dairy-free",
+    "gluten-free-optional"
+  ],
+  "intro_html": "<p>If you think chickpeas are boring, you haven't roasted them yet. Twenty-five minutes in a hot oven transforms canned chickpeas into crispy, golden nuggets that shatter when you bite into them. Toss them with warm spices and pile them on a grain bowl, and you've got a meal that's packed with protein, fiber, and actual flavor.</p><p>This is the kind of dinner that works on a busy Tuesday or a lazy Sunday. It's endlessly customizable — swap the grains, change the vegetables, drizzle whatever sauce lives in the back of your fridge. The chickpeas are the star, and they're hard to mess up.</p>",
+  "ingredients": [
+    {
+      "item": "canned chickpeas",
+      "amount": "2",
+      "unit": "cans (15 oz)",
+      "prep": "drained and rinsed",
+      "group": "chickpeas"
+    },
+    {
+      "item": "olive oil",
+      "amount": "2",
+      "unit": "tbsp",
+      "prep": "",
+      "group": "chickpeas"
+    },
+    {
+      "item": "smoked paprika",
+      "amount": "1",
+      "unit": "tsp",
+      "prep": "",
+      "group": "chickpeas"
+    },
+    {
+      "item": "cumin",
+      "amount": "1/2",
+      "unit": "tsp",
+      "prep": "",
+      "group": "chickpeas"
+    },
+    {
+      "item": "garlic powder",
+      "amount": "1/2",
+      "unit": "tsp",
+      "prep": "",
+      "group": "chickpeas"
+    },
+    {
+      "item": "salt",
+      "amount": "1/2",
+      "unit": "tsp",
+      "prep": "",
+      "group": "chickpeas"
+    },
+    {
+      "item": "cooked quinoa or brown rice",
+      "amount": "3",
+      "unit": "cups",
+      "prep": "",
+      "group": "bowl"
+    },
+    {
+      "item": "cucumber",
+      "amount": "1",
+      "unit": "medium",
+      "prep": "diced",
+      "group": "bowl"
+    },
+    {
+      "item": "cherry tomatoes",
+      "amount": "1",
+      "unit": "cup",
+      "prep": "halved",
+      "group": "bowl"
+    },
+    {
+      "item": "red onion",
+      "amount": "1/4",
+      "unit": "medium",
+      "prep": "thinly sliced",
+      "group": "bowl"
+    },
+    {
+      "item": "baby spinach",
+      "amount": "2",
+      "unit": "cups",
+      "prep": "",
+      "group": "bowl"
+    },
+    {
+      "item": "tahini",
+      "amount": "3",
+      "unit": "tbsp",
+      "prep": "",
+      "group": "sauce"
+    },
+    {
+      "item": "lemon juice",
+      "amount": "2",
+      "unit": "tbsp",
+      "prep": "fresh",
+      "group": "sauce"
+    },
+    {
+      "item": "water",
+      "amount": "2",
+      "unit": "tbsp",
+      "prep": "",
+      "group": "sauce"
+    },
+    {
+      "item": "garlic",
+      "amount": "1",
+      "unit": "clove",
+      "prep": "minced",
+      "group": "sauce"
+    }
+  ],
+  "instructions": [
+    {
+      "step": 1,
+      "text": "Preheat oven to 425°F (220°C). Line a baking sheet with parchment paper."
+    },
+    {
+      "step": 2,
+      "text": "Pat chickpeas VERY dry with paper towels — this is the key to crispiness. Spread them out and blot thoroughly."
+    },
+    {
+      "step": 3,
+      "text": "Toss dried chickpeas with olive oil, smoked paprika, cumin, garlic powder, and salt."
+    },
+    {
+      "step": 4,
+      "text": "Spread in a single layer on the baking sheet. Don't crowd them. Roast for 20-25 minutes, shaking the pan halfway through, until golden and crunchy."
+    },
+    {
+      "step": 5,
+      "text": "While chickpeas roast, whisk together tahini, lemon juice, water, and minced garlic. Add more water if needed for a drizzlable consistency."
+    },
+    {
+      "step": 6,
+      "text": "Divide quinoa among 4 bowls. Top with spinach, cucumber, tomatoes, and red onion."
+    },
+    {
+      "step": 7,
+      "text": "Add crispy chickpeas on top and drizzle generously with tahini sauce. Eat immediately for maximum crunch."
+    }
+  ],
+  "nutrition_per_serving": {
+    "calories": 380,
+    "protein_g": 16,
+    "carbs_g": 48,
+    "fat_g": 14,
+    "fiber_g": 12,
+    "sodium_mg": 320
+  },
+  "tips": [
+    "Pat chickpeas VERY dry — this is the #1 secret to crispiness. Wet chickpeas steam instead of roast.",
+    "Eat the chickpeas within 30 minutes of roasting for peak crunch. They soften as they cool.",
+    "Leftover bowls (without chickpeas) keep 3 days in the fridge. Roast fresh chickpeas when ready to eat.",
+    "Try adding: avocado, pickled red onion, feta crumbles, or a fried egg on top."
+  ],
+  "summary": "Crispy oven-roasted chickpeas with warm spices piled on grain bowls with fresh vegetables and tahini sauce. Ready in 25 minutes, packed with protein and fiber.",
+  "generated_at": "2026-01-28T06:00:00Z",
+  "image": "static/images/recipes/crispy-spiced-chickpea-grain-bowls.png"
+}

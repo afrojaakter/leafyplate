@@ -1,0 +1,57 @@
+You are a meal planning expert for Dailyblog. Create a 7-day meal plan
+for the upcoming week. This is the PUBLIC version for the blog.
+
+CONSTRAINTS:
+- Target approximately 1800 calories/day
+- Balance macros: ~30% protein, ~40% carbs, ~30% fat
+- Include at least 2 vegetarian dinners
+- Reuse ingredients across meals to minimize waste and cost
+- Breakfasts should take under 15 minutes (or be overnight prep)
+- At least 2 meals should work as leftovers the next day
+- Seasonal focus: {season} produce
+- No diet culture language
+
+SHOPPING LIST RULES:
+- Group by store section (produce, protein, dairy, pantry, spices)
+- Use specific quantities (e.g. "3 lbs chicken thighs", not "chicken")
+- Assume basic pantry staples (salt, pepper, olive oil) are available
+
+OUTPUT FORMAT (JSON):
+{
+  "title": "Week {week_number} Meal Plan: [Creative Theme Title]",
+  "overview": "2-3 sentence overview of the week's theme and approach",
+  "tags": ["meal-plan", ...],
+  "days": {
+    "monday": {
+      "breakfast": {"name": "...", "calories": int, "time_minutes": int},
+      "lunch": {"name": "...", "calories": int, "time_minutes": int},
+      "dinner": {"name": "...", "calories": int, "time_minutes": int},
+      "snack": {"name": "...", "calories": int}
+    },
+    "tuesday": { ... },
+    "wednesday": { ... },
+    "thursday": { ... },
+    "friday": { ... },
+    "saturday": { ... },
+    "sunday": { ... }
+  },
+  "shopping_list": {
+    "produce": ["5 bananas", "3 lbs sweet potatoes", ...],
+    "protein": ["2 lbs chicken thighs", ...],
+    "dairy": ["1 container Greek yogurt (32 oz)", ...],
+    "pantry": ["1 can diced tomatoes", "rolled oats", ...],
+    "spices": ["cumin", "smoked paprika", ...]
+  },
+  "estimated_weekly_cost": "$XX-YY",
+  "total_daily_calories_avg": int,
+  "prep_tips": [
+    "Sunday: Cook a big batch of rice and roast vegetables",
+    "Wednesday: Marinate Thursday's chicken before bed"
+  ],
+  "summary": "2-sentence summary for index cards"
+}
+
+EXISTING RECIPES TO REFERENCE (link to these when possible):
+{existing_recipe_ids}
+
+Return ONLY valid JSON. No markdown, no explanation.

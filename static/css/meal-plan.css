@@ -1,0 +1,67 @@
+/* ═══════════════════════════════════════════════════════════════
+   Dailyblog — Meal Plan Styles
+   Additional styles for meal plan pages
+   ═══════════════════════════════════════════════════════════════ */
+
+.meal-plan-post {
+    max-width: var(--max-width-page);
+}
+
+.meal-plan-header {
+    margin-bottom: var(--space-2xl);
+}
+
+.meal-plan-header .overview {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+    max-width: var(--max-width-article);
+}
+
+/* Day card enhancements */
+.day-card-today {
+    border-color: var(--color-accent);
+    border-width: 2px;
+}
+
+.day-card-today h3::after {
+    content: ' — Today';
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--color-accent);
+    text-transform: none;
+}
+
+/* Leftover indicator */
+.meal-leftover {
+    font-style: italic;
+    color: var(--color-text-muted);
+}
+
+.meal-leftover::before {
+    content: '↻ ';
+    color: var(--color-green);
+}
+
+/* Quick meal indicator (for busy nights) */
+.meal-quick::after {
+    content: ' ⚡';
+    font-size: 0.75rem;
+}
+
+/* Shopping list print-friendly */
+.shopping-list h2 {
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-lg);
+}
+
+/* Cost estimate badge */
+.cost-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: var(--color-green-light);
+    color: var(--color-green);
+    border-radius: var(--border-radius-pill);
+    font-size: 0.85rem;
+    font-weight: 600;
+}

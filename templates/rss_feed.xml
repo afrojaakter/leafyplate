@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dailyblog</title>
+    <link>{site_url}</link>
+    <description>Fresh ideas. Real food. Zero nonsense. AI-powered recipes, nutrition articles, and meal plans.</description>
+    <language>en</language>
+    <lastBuildDate>{build_date}</lastBuildDate>
+    <atom:link href="{site_url}/feed.xml" rel="self" type="application/rss+xml"/>
+    {items}
+  </channel>
+</rss>

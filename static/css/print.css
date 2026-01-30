@@ -1,0 +1,94 @@
+/* ═══════════════════════════════════════════════════════════════
+   Dailyblog — Print Stylesheet
+   Optimized for printing recipes and meal plans
+   ═══════════════════════════════════════════════════════════════ */
+
+@media print {
+    /* Hide non-essential elements */
+    .site-header,
+    .site-footer,
+    .share-buttons,
+    .tag-list,
+    .shop-ingredients,
+    .store-links,
+    .skip-link,
+    .pagination,
+    .card-read-more {
+        display: none !important;
+    }
+
+    /* Reset colors for print */
+    body {
+        font-size: 11pt;
+        color: #000;
+        background: #fff;
+        line-height: 1.5;
+    }
+
+    /* Ensure content flows properly */
+    main {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    /* Page breaks */
+    .nutrition-card {
+        break-inside: avoid;
+    }
+
+    .ingredients-section {
+        break-inside: avoid;
+    }
+
+    .day-card {
+        break-inside: avoid;
+    }
+
+    /* Clean up recipe sections */
+    .ingredients-section {
+        background: none;
+        border: 1px solid #ccc;
+        padding: 12pt;
+    }
+
+    .tips-section {
+        background: none;
+        border-left: 3px solid #666;
+    }
+
+    .nutrition-card {
+        background: none;
+        border: 1px solid #ccc;
+    }
+
+    /* Shopping list checkboxes for manual checking */
+    .shopping-group li::before {
+        content: '☐ ';
+        font-size: 14pt;
+    }
+
+    /* Remove link styling */
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+
+    /* Show URLs for external links */
+    .article-content a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+
+    /* Add header to print */
+    .recipe-post::before,
+    .meal-plan-post::before {
+        content: 'Dailyblog — dailyblog.example.com';
+        display: block;
+        font-size: 9pt;
+        color: #999;
+        margin-bottom: 12pt;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 6pt;
+    }
+}

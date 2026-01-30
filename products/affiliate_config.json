@@ -1,0 +1,38 @@
+{
+  "stores": {
+    "walmart": {
+      "name": "Walmart",
+      "color": "#0071CE",
+      "search_url_template": "https://www.walmart.com/search?q={query}",
+      "affiliate_param": "affiliates_ad_id",
+      "affiliate_id_env": "WALMART_AFFILIATE_ID",
+      "badge_label": "Walmart"
+    },
+    "amazon_fresh": {
+      "name": "Amazon Fresh",
+      "color": "#FF9900",
+      "search_url_template": "https://www.amazon.com/s?k={query}&i=amazonfresh",
+      "affiliate_param": "tag",
+      "affiliate_id_env": "AMAZON_AFFILIATE_TAG",
+      "badge_label": "Amazon"
+    },
+    "instacart": {
+      "name": "Instacart",
+      "color": "#43B02A",
+      "search_url_template": "https://www.instacart.com/store/search/{query}",
+      "affiliate_param": "utm_source",
+      "affiliate_id_env": "INSTACART_AFFILIATE_ID",
+      "badge_label": "Instacart"
+    },
+    "thrive_market": {
+      "name": "Thrive Market",
+      "color": "#1B6D45",
+      "search_url_template": "https://thrivemarket.com/search?search={query}",
+      "affiliate_param": "ref",
+      "affiliate_id_env": "THRIVE_AFFILIATE_ID",
+      "badge_label": "Thrive"
+    }
+  },
+  "default_stores": ["walmart", "amazon_fresh"],
+  "notes": "Phase 1: Use search URL fallback for all products. Phase 2: Build curated catalog with exact product URLs."
+}

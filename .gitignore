@@ -1,0 +1,6 @@
+.env
+__pycache__/
+*.pyc
+output/
+data/personal_plans/*/email_preview.html
+nul

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dailyblog Weekly Digest</title>
+</head>
+<body style="margin:0;padding:0;background-color:#FAFAF7;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:600px;margin:0 auto;background:#FFFFFF;">
+        <!-- Header -->
+        <tr>
+            <td style="background:linear-gradient(135deg,#E07A3A,#5B8C5A);padding:32px 24px;text-align:center;">
+                <span style="font-size:32px;">&#x1F96C;</span>
+                <h1 style="color:#FFFFFF;font-size:24px;margin:8px 0 4px;font-family:Georgia,serif;">Dailyblog Weekly Digest</h1>
+                <p style="color:rgba(255,255,255,0.9);font-size:14px;margin:0;">Fresh ideas. Real food. Zero nonsense.</p>
+            </td>
+        </tr>
+
+        <!-- Intro -->
+        <tr>
+            <td style="padding:24px;">
+                <p style="color:#2D2A24;font-size:16px;line-height:1.6;margin:0 0 16px;">
+                    Here's the best of what we published this week. Recipes, nutrition deep-dives, and practical tips — all in one place.
+                </p>
+            </td>
+        </tr>
+
+        <!-- Top Recipes -->
+        <tr>
+            <td style="padding:0 24px;">
+                <h2 style="color:#E07A3A;font-size:18px;font-family:Georgia,serif;margin:0 0 16px;border-bottom:2px solid #E07A3A;padding-bottom:8px;">
+                    This Week's Recipes
+                </h2>
+                {recipe_cards_html}
+            </td>
+        </tr>
+
+        <!-- Featured Article -->
+        <tr>
+            <td style="padding:24px;">
+                <h2 style="color:#5B8C5A;font-size:18px;font-family:Georgia,serif;margin:0 0 16px;border-bottom:2px solid #5B8C5A;padding-bottom:8px;">
+                    Featured Article
+                </h2>
+                {featured_article_html}
+            </td>
+        </tr>
+
+        <!-- Meal Plan Teaser -->
+        <tr>
+            <td style="padding:0 24px 24px;">
+                <div style="background:#F0EDE6;border-radius:8px;padding:20px;">
+                    <h3 style="color:#2D2A24;font-size:16px;margin:0 0 8px;">This Week's Meal Plan</h3>
+                    <p style="color:#7A7468;font-size:14px;line-height:1.5;margin:0 0 12px;">{meal_plan_teaser}</p>
+                    <a href="{meal_plan_url}" style="color:#E07A3A;font-weight:600;font-size:14px;text-decoration:none;">View Full Plan &rarr;</a>
+                </div>
+            </td>
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+            <td style="background:#F0EDE6;padding:24px;text-align:center;border-top:1px solid #E5E0D5;">
+                <p style="color:#7A7468;font-size:12px;margin:0 0 8px;">
+                    &copy; {year} Dailyblog. Content generated with AI assistance.
+                </p>
+                <p style="color:#7A7468;font-size:12px;margin:0;">
+                    <a href="{unsubscribe_url}" style="color:#7A7468;">Unsubscribe</a>
+                </p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

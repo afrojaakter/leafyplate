@@ -1,0 +1,423 @@
+# Dailyblog — Product Requirements Document (PRD)
+
+## 1. Product Vision
+
+Dailyblog is an AI-powered healthy eating platform that generates personalized weekly meal plans, recipes, and grocery shopping lists — with every ingredient linked to real, purchasable grocery products.
+
+**One-liner:** "We plan your meals, build your shopping list, and link you straight to the checkout."
+
+**Tagline:** "Fresh ideas. Real food. Zero nonsense."
+
+**Inspiration:** Applies the Roomellow "retrieval-first" model to food. Just as Roomellow recommends real furniture SKUs you can buy, Dailyblog recommends real grocery products you can add to your cart.
+
+---
+
+## 2. Problem Statement
+
+Busy people (like you, your husband, and your sister) face these daily pain points:
+
+- **"What should I cook?"** — Decision fatigue around meals, especially on weeknights
+- **"What do I need to buy?"** — Building grocery lists from scratch every week
+- **"I don't want to think about this"** — The mental load of meal planning, nutrition balancing, and variety
+- **"I want to just order/pick up"** — Shopping should be one click, not 30 minutes of browsing
+
+Existing solutions (recipe blogs, meal kit services) either require too much work from the user or are too expensive ($10+/serving for meal kits).
+
+---
+
+## 3. Target Users
+
+| Persona | Description |
+|---------|-------------|
+| **Busy Professional** | Works full-time, wants healthy meals but hates planning. Willing to grocery shop or order delivery. |
+| **Health-Conscious Parent** | Feeds a family, needs variety, budget-aware, meal preps on weekends. |
+| **Fitness-Oriented** | Tracks macros/calories, needs high-protein options, wants nutrition data. |
+
+**Initial users:** 3 (you, husband, sister). **Scale target:** Public launch with subscriber signups.
+
+---
+
+## 4. Product Components
+
+### 4A. Public Blog (Content Marketing + SEO)
+
+AI-generated content published daily to a static site:
+
+| Content Type | Frequency | Purpose |
+|-------------|-----------|---------|
+| Recipes | 2/day | SEO traffic, showcase cooking style |
+| Nutrition Articles | 1/day | Authority building, health content |
+| Myth Busters | Every 3 days | Engagement, shareability |
+| Weekly Meal Plans | Sundays | Lead magnet → email signups |
+
+Each recipe includes a "Shop the Ingredients" section with affiliate links to grocery products.
+
+### 4B. Personalized Email Service (Core Product)
+
+Weekly personalized meal plans delivered to subscribers:
+
+| Deliverable | Timing | Content |
+|------------|--------|---------|
+| Weekly Meal Plan | Sunday evening | 7-day plan (breakfast, lunch, dinner, snack) tailored to subscriber profile |
+| Shopping List | With meal plan | Grouped by store section, quantities for household size, with product links |
+| Tonight's Dinner | Daily 4 PM (optional) | Quick reminder with just that night's recipe |
+
+### 4C. Shoppable Shopping List (Monetization Layer)
+
+The Roomellow-inspired feature. Every ingredient in a shopping list maps to a real grocery product:
+
+```
+Shopping List — Week of Jan 28, 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PRODUCE
+  ✓ Broccoli crowns (2 lbs)          [Buy on Walmart →] [Buy on Amazon Fresh →]
+  ✓ Sweet potatoes (3 lbs)           [Buy on Walmart →] [Buy on Amazon Fresh →]
+  ✓ Baby spinach (5 oz bag)          [Buy on Walmart →] [Buy on Amazon Fresh →]
+
+PROTEIN
+  ✓ Chicken thighs, boneless (2 lbs) [Buy on Walmart →] [Buy on Amazon Fresh →]
+  ✓ Canned chickpeas (2 cans)        [Buy on Walmart →] [Buy on Amazon Fresh →]
+
+DAIRY
+  ✓ Greek yogurt, plain (32 oz)      [Buy on Walmart →] [Buy on Amazon Fresh →]
+```
+
+**How it works:**
+
+1. AI generates a meal plan with specific ingredients
+2. System maps each ingredient to real product listings (via grocery APIs or pre-built product catalog)
+3. Each product links to the grocery store's product page with an affiliate tag
+4. User clicks → buys on Walmart/Amazon/Instacart → Dailyblog earns commission
+
+---
+
+## 5. Affiliate / Partner Strategy (Roomellow Model Applied)
+
+### Phase 1: Affiliate Links (Launch)
+
+Use existing affiliate programs — no partner deals needed to start:
+
+| Program | Commission | How to Join |
+|---------|-----------|-------------|
+| Amazon Associates | 1-5% on grocery | Self-signup at affiliate-program.amazon.com |
+| Walmart Affiliate | 1-4% on grocery | Via Impact Radius |
+| Instacart Affiliate | Varies | Apply through Instacart's partner program |
+| Thrive Market Affiliate | $5-40 per referral | Apply at thrivemarket.com/affiliates |
+
+**Implementation:** Append affiliate tags to product URLs. No API integration needed initially — just construct URLs with the right parameters.
+
+Example affiliate URL patterns:
+
+```
+Amazon:    https://amazon.com/dp/B08XYZ?tag=dailyblog-20
+Walmart:   https://walmart.com/ip/12345?affiliates_ad_id=dailyblog
+Instacart: https://instacart.com/store/product/12345?utm_source=dailyblog
+```
+
+### Phase 2: Product Catalog (Post-Launch)
+
+Build a grocery product database (like Roomellow's furniture catalog):
+
+- **Spoonacular API** — Maps ingredients to specific grocery products with prices
+- **Open Food Facts** — Free product database with barcodes and nutrition
+- **Manual curation** — Build a curated catalog of recommended brands/products
+
+### Phase 3: Partner Deals (Growth)
+
+Approach grocery delivery services for direct partnerships:
+
+- White-label meal planning for grocery stores (like Roomellow's B2B model)
+- Sponsored ingredients — Brands pay to be the recommended product for "olive oil" or "Greek yogurt"
+- "Order Full List" button — Deep link that adds all items to an Instacart/Walmart cart at once (requires partner API access)
+
+---
+
+## 6. Subscriber Profile System
+
+Each subscriber has a preference profile:
+
+```json
+{
+  "name": "Afroj",
+  "email": "afroj@example.com",
+  "household_size": 2,
+  "dietary_restrictions": ["no-pork"],
+  "preferences": {
+    "cuisine_likes": ["mediterranean", "asian", "mexican"],
+    "disliked_ingredients": ["eggplant", "olives"],
+    "cooking_skill": "intermediate",
+    "max_cooking_time_minutes": 45,
+    "meal_prep_friendly": true
+  },
+  "nutrition_targets": {
+    "daily_calories": 1800,
+    "high_protein": true
+  },
+  "schedule": {
+    "busy_nights": ["tuesday", "thursday"],
+    "meal_prep_day": "sunday"
+  },
+  "budget": "moderate",
+  "preferred_grocery_store": "walmart",
+  "delivery_time": "sunday_evening",
+  "active": true
+}
+```
+
+**Key fields:**
+
+- **dietary_restrictions** — Allergies, religious, ethical (halal, vegetarian, nut-free)
+- **busy_nights** — Get quick meals (<20 min) or leftover assignments
+- **meal_prep_day** — Plan accounts for batch cooking
+- **disliked_ingredients** — AI avoids these
+- **preferred_grocery_store** — Shopping links prioritize this store
+- **household_size** — Scales servings and shopping quantities
+
+**Phase 1:** JSON files per subscriber (family only)
+**Phase 2:** Google Form → JSON conversion (friends)
+**Phase 3:** Web signup form on the blog (public)
+
+---
+
+## 7. Technical Architecture
+
+### Tech Stack
+
+- **Python 3.12** — All backend/generation logic
+- **Google Gemini API** — AI content generation (recipes, articles, meal plans)
+- **feedparser + BeautifulSoup** — RSS feed parsing and content extraction
+- **Spoonacular API** — Ingredient-to-product mapping, nutrition data
+- **USDA FoodData API** — Nutrition verification
+- **Brevo API** — Email delivery (meal plans, digests, reminders)
+- **GitHub Actions** — Automated daily/weekly generation
+- **GitHub Pages** — Static site hosting (blog)
+- **Static HTML/CSS** — No JavaScript required for blog (like PenguinPulse)
+
+### Project Structure
+
+```
+Dailyblog/
+├── daily_batch_update.py        # Blog content generation engine
+├── meal_planner.py              # Personalized meal plan generator
+├── product_linker.py            # Maps ingredients → grocery product links
+├── send_digest.py               # Blog digest email
+├── send_meal_plans.py           # Personalized meal plan emails
+├── config.py                    # Site-wide constants
+├── requirements.txt
+├── sources.json                 # RSS feeds + API config
+├── products/
+│   ├── catalog.json             # Curated grocery product catalog
+│   └── affiliate_config.json   # Affiliate program IDs and URL patterns
+├── subscribers/
+│   ├── schema.json
+│   └── profiles/
+│       ├── afroj.json
+│       ├── husband.json
+│       └── sister.json
+├── prompts/
+│   ├── identify_food_topics.txt
+│   ├── generate_recipe.txt
+│   ├── generate_article.txt
+│   ├── generate_meal_plan.txt
+│   ├── generate_personal_plan.txt
+│   └── generate_myth_buster.txt
+├── templates/
+│   ├── base.html
+│   ├── index.html
+│   ├── recipe.html              # Includes "Shop the Ingredients" section
+│   ├── article.html
+│   ├── meal_plan.html
+│   ├── tag.html / tags_index.html
+│   ├── archive.html
+│   ├── about.html / 404.html
+│   ├── signup.html
+│   ├── newsletter_email.html
+│   ├── personal_plan_email.html # Includes shopping links
+│   ├── tonight_dinner_email.html
+│   ├── rss_feed.xml / sitemap.xml
+├── static/
+│   ├── css/ (style.css, recipe-card.css, meal-plan.css, print.css)
+│   └── images/
+├── data/
+│   ├── articles/
+│   ├── personal_plans/
+│   └── processed_urls.json
+├── output/                      # Generated static site
+└── .github/workflows/
+    ├── daily_generate.yml       # 6 AM UTC daily
+    ├── weekly_meal_plans.yml    # Sunday 6 PM UTC
+    └── weekly_digest.yml        # Sunday 8 PM UTC
+```
+
+### Key New Component: product_linker.py
+
+Maps raw ingredients from AI-generated recipes/meal plans to real grocery products with affiliate links:
+
+```python
+# Input:  {"item": "chicken thighs, boneless", "amount": "2", "unit": "lbs"}
+# Output: {
+#   "item": "chicken thighs, boneless",
+#   "amount": "2", "unit": "lbs",
+#   "products": [
+#     {
+#       "store": "walmart",
+#       "name": "Great Value Boneless Skinless Chicken Thighs, 2.25 lb",
+#       "price": "$5.97",
+#       "url": "https://walmart.com/ip/12345?affiliates_ad_id=dailyblog",
+#       "image_url": "https://..."
+#     },
+#     {
+#       "store": "amazon_fresh",
+#       "name": "365 by Whole Foods Market Chicken Thighs Boneless Skinless",
+#       "price": "$6.99",
+#       "url": "https://amazon.com/dp/B08XYZ?tag=dailyblog-20",
+#       "image_url": "https://..."
+#     }
+#   ]
+# }
+```
+
+**Approach options:**
+
+1. **Spoonacular API** — Has a `mapIngredientsToGroceryProducts` endpoint (but limited on free tier)
+2. **Pre-built catalog** — Manually curate top 200 common grocery items with affiliate links per store
+3. **Search URL fallback** — If no exact product match, link to a store search: `walmart.com/search?q=boneless+chicken+thighs`
+
+**Recommended:** Start with option 3 (search URL fallback) for launch. Build the curated catalog over time.
+
+---
+
+## 8. Visual Design
+
+- **Palette:** Warm off-white (`#FAFAF7`), burnt orange accent (`#E07A3A`), sage green (`#5B8C5A`), dark brown text (`#2D2A24`). Dark mode support.
+- **Typography:** DM Serif Display (headings), Inter (body) — Google Fonts
+- **Layout:** 740px articles, 960px index/meal plans. Mobile-first responsive.
+- **Logo:** 🥬 dailyblog
+- **Shopping list styling:** Checkbox list with store badges (colored pills: blue for Walmart, orange for Amazon, green for Instacart)
+
+---
+
+## 9. AI Content Voice
+
+- Warm, encouraging, slightly irreverent. Not preachy or clinical.
+- **Anti-diet-culture:** No "guilt-free", "skinny", "cheat meal" language
+- **Practical:** Every post should teach something actionable
+- **Honest about AI:** Footer disclaimer that content is AI-generated. Nutrition info labeled "estimated."
+- **Short intros:** No 800-word life stories before the recipe
+
+---
+
+## 10. Monetization Summary
+
+| Revenue Stream | Phase | Effort | Revenue Potential |
+|---------------|-------|--------|-------------------|
+| Affiliate links (Amazon, Walmart) | Launch | Low — just URL construction | $0.05-0.50 per shopping list click-through |
+| Thrive Market referrals | Launch | Low — apply to program | $5-40 per new member signup |
+| Sponsored ingredients | 6+ months | Medium — need traffic first | $50-500/month per brand slot |
+| White-label for grocery stores | 12+ months | High — B2B sales | $1K-5K/month per partner |
+| Premium subscriber tier | 6+ months | Medium — need user base | $5-10/month per subscriber |
+
+---
+
+## 11. Implementation Phases
+
+### Phase 1: Foundation
+- [ ] Create project skeleton (all directories)
+- [ ] Write config.py, sources.json, requirements.txt
+- [ ] Create templates/base.html + static/css/style.css (full design system)
+- [ ] Create hardcoded test article JSON and verify template rendering
+
+### Phase 2: Blog Content Pipeline
+- [ ] Implement RSS feed fetching + source content extraction
+- [ ] Write all blog prompt files
+- [ ] Implement Gemini integration with structured JSON output
+- [ ] Implement generate_recipe(), generate_article(), generate_myth_buster()
+- [ ] Implement deduplication
+
+### Phase 3: Blog Templates + Site Building
+- [ ] Build all HTML templates (recipe, article, meal plan, index, tags, archive)
+- [ ] Implement template rendering engine + pagination
+- [ ] RSS feed + sitemap generation
+- [ ] CSS: recipe-card.css, meal-plan.css, print.css
+
+### Phase 4: Shoppable Shopping Lists
+- [ ] Set up affiliate accounts (Amazon Associates, Walmart via Impact)
+- [ ] Create products/affiliate_config.json with URL patterns per store
+- [ ] Implement product_linker.py — ingredient → product URL mapping
+- [ ] Add "Shop the Ingredients" section to recipe template
+- [ ] Style shopping links with store badges
+
+### Phase 5: Personalized Meal Plans
+- [ ] Define subscriber profile schema
+- [ ] Create initial profiles (you, husband, sister)
+- [ ] Write prompts/generate_personal_plan.txt
+- [ ] Implement meal_planner.py with profile-aware generation
+- [ ] Design personal_plan_email.html with shopping links
+- [ ] Implement send_meal_plans.py via Brevo
+- [ ] Optional: "Tonight's Dinner" daily reminder
+
+### Phase 6: Automation + Launch
+- [ ] Write orchestration logic in daily_batch_update.py
+- [ ] GitHub Actions workflows (daily blog, weekly plans, weekly digest)
+- [ ] End-to-end local test
+- [ ] Set up repo, secrets, GitHub Pages
+- [ ] First live run
+
+---
+
+## 12. Success Metrics
+
+| Metric | Target (Month 1) | Target (Month 6) |
+|--------|------------------|------------------|
+| Blog posts generated | 90+ (3/day) | 500+ |
+| Email subscribers | 3 (family) | 50+ |
+| Affiliate link clicks | Track baseline | 100+/month |
+| Affiliate revenue | $0 (learning) | $50+/month |
+| Subscriber satisfaction | Family feedback | NPS > 7 |
+
+---
+
+## 13. Future Enhancements (Not in Initial Build)
+
+- **Web signup form** — Replace JSON profiles with a public signup page
+- **"Add All to Cart" button** — Deep link to Instacart/Walmart with full list (needs partner API)
+- **Feedback loop** — Subscribers rate meals, AI adapts preferences
+- **Leftovers tracking** — "What's in your fridge?" → adjusted plan
+- **Grocery price comparison** — Show cheapest option across stores
+- **Mobile app** — Push notification for Tonight's Dinner
+- **Cooking videos** — AI-generated short recipe videos
+
+---
+
+## 14. Verification Plan
+
+- **Blog:** `python daily_batch_update.py` → verify HTML output renders correctly in browser
+- **Recipe shopping links:** Verify affiliate URLs are valid and correctly tagged
+- **Personal plan:** `python meal_planner.py --profile afroj` → verify plan respects restrictions and preferences
+- **Email:** `python send_meal_plans.py --dry-run` → preview email HTML
+- **Product linker:** `python product_linker.py --test` → verify ingredient-to-product mapping
+- **Full pipeline:** GitHub Actions → generate → deploy → verify live site + email delivery
+
+---
+
+## 15. Dependencies
+
+```
+google-genai>=1.0.0
+feedparser>=6.0.0
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
+```
+
+---
+
+## 16. Secrets Required
+
+- **GEMINI_API_KEY** — Google Gemini API
+- **SPOONACULAR_API_KEY** — Ingredient-to-product mapping (free tier: 150 req/day)
+- **USDA_API_KEY** — Nutrition verification (free)
+- **BREVO_API_KEY + BREVO_LIST_ID** — Email delivery
+- **AMAZON_AFFILIATE_TAG** — Amazon Associates tag
+- **WALMART_AFFILIATE_ID** — Walmart/Impact affiliate ID

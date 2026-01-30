@@ -1,0 +1,20 @@
+<article class="article-card">
+    {card_image}
+    <div class="card-body">
+    <div class="card-meta">
+        <span class="card-type-badge badge-{type_class}">{type_label}</span>
+        <time datetime="{date}">{date_formatted}</time>
+    </div>
+    <h2 class="card-title">
+        <a href="{base_path}/{url_prefix}/{slug}/">{title}</a>
+    </h2>
+    <p class="card-subtitle">{subtitle}</p>
+    <p class="card-summary">{summary}</p>
+    <div class="card-tags">
+        {tag_links}
+    </div>
+    <a href="{base_path}/{url_prefix}/{slug}/" class="card-read-more">
+        Read more &rarr;
+    </a>
+    </div>
+</article>

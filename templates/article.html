@@ -1,0 +1,31 @@
+<article class="article-post">
+    <header>
+        <div class="recipe-meta-bar">
+            <span class="post-type-badge {badge_class}">{type_label}</span>
+            <time datetime="{date}">{date_formatted}</time>
+        </div>
+        <h1>{title}</h1>
+        <p class="card-subtitle">{subtitle}</p>
+    </header>
+
+    <div class="article-content">
+        {content_html}
+    </div>
+
+    <div class="key-takeaways">
+        <h2>Key Takeaways</h2>
+        <ul>
+            {takeaways_html}
+        </ul>
+    </div>
+
+    <div class="share-buttons">
+        <a href="https://twitter.com/intent/tweet?text={encoded_title}&amp;url={encoded_url}" class="share-btn share-twitter" target="_blank" rel="noopener">Share on X</a>
+        <a href="https://www.pinterest.com/pin/create/button/?url={encoded_url}&amp;description={encoded_title}" class="share-btn share-pinterest" target="_blank" rel="noopener">Pin It</a>
+        <a href="mailto:?subject={encoded_title}&amp;body={encoded_url}" class="share-btn share-email">Email</a>
+    </div>
+
+    <div class="tag-list">
+        {tag_links}
+    </div>
+</article>

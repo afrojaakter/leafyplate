@@ -1,0 +1,121 @@
+{
+  "feeds": [
+    {
+      "id": "eatingwell",
+      "name": "EatingWell",
+      "url": "https://www.eatingwell.com/feed/",
+      "category": "recipes",
+      "priority": "high"
+    },
+    {
+      "id": "skinnytaste",
+      "name": "Skinnytaste",
+      "url": "https://www.skinnytaste.com/feed/",
+      "category": "recipes",
+      "priority": "high"
+    },
+    {
+      "id": "minimalist_baker",
+      "name": "Minimalist Baker",
+      "url": "https://minimalistbaker.com/feed/",
+      "category": "recipes",
+      "priority": "high"
+    },
+    {
+      "id": "cookie_and_kate",
+      "name": "Cookie and Kate",
+      "url": "https://cookieandkate.com/feed/",
+      "category": "recipes",
+      "priority": "medium"
+    },
+    {
+      "id": "nutrition_stripped",
+      "name": "Nutrition Stripped",
+      "url": "https://nutritionstripped.com/feed/",
+      "category": "nutrition",
+      "priority": "high"
+    },
+    {
+      "id": "real_food_dietitians",
+      "name": "The Real Food Dietitians",
+      "url": "https://therealfooddietitians.com/feed/",
+      "category": "recipes",
+      "priority": "medium"
+    },
+    {
+      "id": "joyful_healthy_eats",
+      "name": "Joyful Healthy Eats",
+      "url": "https://www.joyfulhealthyeats.com/feed/",
+      "category": "recipes",
+      "priority": "medium"
+    },
+    {
+      "id": "100_days_real_food",
+      "name": "100 Days of Real Food",
+      "url": "https://www.100daysofrealfood.com/feed/",
+      "category": "nutrition",
+      "priority": "medium"
+    },
+    {
+      "id": "harvard_nutrition_source",
+      "name": "Harvard T.H. Chan Nutrition Source",
+      "url": "https://nutritionsource.hsph.harvard.edu/feed/",
+      "category": "science",
+      "priority": "high"
+    },
+    {
+      "id": "examine_com",
+      "name": "Examine.com",
+      "url": "https://examine.com/blog/feed/",
+      "category": "science",
+      "priority": "high"
+    },
+    {
+      "id": "food_network_healthy",
+      "name": "Food Network",
+      "url": "https://www.foodnetwork.com/fn-dish/feed",
+      "category": "recipes",
+      "priority": "medium"
+    },
+    {
+      "id": "bbc_good_food",
+      "name": "BBC Good Food",
+      "url": "https://www.bbcgoodfood.com/feed",
+      "category": "recipes",
+      "priority": "medium"
+    },
+    {
+      "id": "medical_news_today_nutrition",
+      "name": "Medical News Today - Nutrition",
+      "url": "https://www.medicalnewstoday.com/rss/nutrition",
+      "category": "science",
+      "priority": "medium"
+    },
+    {
+      "id": "superhealthy_kids",
+      "name": "Super Healthy Kids",
+      "url": "https://www.superhealthykids.com/feed/",
+      "category": "family",
+      "priority": "low"
+    }
+  ],
+  "apis": {
+    "spoonacular": {
+      "base_url": "https://api.spoonacular.com",
+      "endpoints": {
+        "random_recipes": "/recipes/random",
+        "search": "/recipes/complexSearch",
+        "nutrition": "/recipes/{id}/nutritionWidget.json",
+        "meal_plan": "/mealplanner/generate",
+        "map_ingredients": "/food/ingredients/map"
+      }
+    },
+    "usda_fooddata": {
+      "base_url": "https://api.nal.usda.gov/fdc/v1",
+      "endpoints": {
+        "search": "/foods/search",
+        "food_detail": "/food/{fdcId}"
+      }
+    }
+  }
+}
